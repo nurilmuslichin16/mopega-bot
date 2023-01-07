@@ -15,7 +15,7 @@ define('HS', true);
  *  ____________________________________________________________
 */
 
-require_once '../config/koneksi.php';
+require_once '../config/konfigurasi.php';
 
 require_once '../helper/fungsi.php';
 
