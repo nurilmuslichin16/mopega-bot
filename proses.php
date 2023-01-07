@@ -81,19 +81,68 @@ function getTextMessage($message)
         $reqsc      = array();
 
         switch (true) {
-            case $reply == 'Silahkan tulis siapa nama kamu?':
+            case $reply == 'Silahkan masukan nik kamu :':
 
-                $query = mysqli_query($koneksi, "INSERT INTO tb_helpdesk (h_telegram_id, nama_hd) VALUES ($fromid, '$pesan')");
+                if (is_numeric($pesan) == false) {
+                    $text = 'Isi NIK hanya dengan angka!';
+                    sendApiMsg($chatid, $text);
+
+                    $text = 'Silahkan masukan nik kamu :';
+                    sendApiMsgReply($chatid, $text);
+                } else {
+                    $query = mysqli_query($koneksi, "INSERT INTO tb_teknisi (id_telegram, nik) VALUES ($fromid, '$pesan')");
+
+                    sendApiAction($chatid);
+
+                    if ($query) {
+                        $text = "NIK kamu $pesan, berhasil disimpan.";
+                        sendApiMsg($chatid, $text);
+
+                        $text = 'Masukan nama kamu :';
+                        sendApiMsgReply($chatid, $text);
+                    } else {
+                        $text = "❗️ Maaf pendaftaran gagal dilakukan. Silahkan coba beberapa saat lagi..";
+                    }
+                }
+
+                break;
+
+            case $reply == 'Masukan nama kamu :':
+
+                $query = mysqli_query($koneksi, "UPDATE tb_teknisi SET nama_teknisi = '$pesan' WHERE id_telegram = '$fromid'");
 
                 sendApiAction($chatid);
 
                 if ($query) {
-                    $text = "Halo $pesan 👋🏻, pendaftaran berhasil dilakukan, kamu akan diberitahu kembali jika akun ini sudah diapprove oleh admin :)";
+                    $text = "Nama kamu $pesan, berhasil disimpan.";
+                    sendApiMsg($chatid, $text);
+
+                    $text = 'Masukan Mitra :';
+                    sendApiMsgReply($chatid, $text);
+                    $text = "Isi Mitra dengan nama perusahaan. misal : HCP, TA, GLOBAL, KOPEGTEL, ZAG, KJS";
+                    sendApiMsg($chatid, $text);
                 } else {
                     $text = "❗️ Maaf pendaftaran gagal dilakukan. Silahkan coba beberapa saat lagi..";
                 }
 
-                sendApiMsg($chatid, $text);
+                break;
+
+            case $reply == 'Masukan Mitra :':
+
+                $query = mysqli_query($koneksi, "UPDATE tb_teknisi SET mitra = '$pesan' WHERE id_telegram = '$fromid'");
+
+                sendApiAction($chatid);
+
+                if ($query) {
+                    $text = "Mitra kamu $pesan, berhasil disimpan.";
+                    sendApiMsg($chatid, $text);
+
+                    $text = "Pendaftaran berhasil dilakukan, kamu akan diberitahu kembali jika akun ini sudah diapprove oleh admin :)";
+                    sendApiMsg($chatid, $text);
+                } else {
+                    $text = "❗️ Maaf pendaftaran gagal dilakukan. Silahkan coba beberapa saat lagi..";
+                }
+
                 break;
 
             case $str   == '!create data':
@@ -1023,7 +1072,7 @@ function getTextMessage($message)
                             $text = 'Silahkan masukan nik kamu :';
                             sendApiMsgReply($chatid, $text);
                         } elseif (mysqli_num_rows($ceknoname) > 0) {
-                            $text = '👤 Masukan nama kamu :';
+                            $text = 'Masukan nama kamu :';
                             sendApiMsgReply($chatid, $text);
                         } elseif (mysqli_num_rows($ceknomitra) > 0) {
                             $text = 'Masukan Mitra :';
@@ -1031,7 +1080,7 @@ function getTextMessage($message)
                             $text = "Isi Mitra dengan nama perusahaan. misal : HCP, TA, GLOBAL, KOPEGTEL, ZAG, KJS";
                             sendApiMsg($chatid, $text);
                         } else {
-                            $text = 'Halo 👋🏻, perkenalkan saya adalah jarvis, robot yang akan membantu pekerjaan teman-teman.';
+                            $text = 'Halo 👋🏻, perkenalkan saya adalah MOPEGA BOT, robot yang akan membantu pekerjaan teman-teman.';
                             sendApiMsg($chatid, $text);
                             $text = 'Saat ini kamu mencoba untuk mendaftar sebagai Teknisi';
                             sendApiMsg($chatid, $text);
@@ -1047,7 +1096,7 @@ function getTextMessage($message)
                 case $pesan == '/help':
                     sendApiAction($chatid);
 
-                    $text = "Halo. Kenalin saya MOPEGABOT, asisten dari Aplikasi MOPEGA. Saya ditugaskan untuk membantu pekerjaan teman-teman teknisi.\n\n";
+                    $text = "Halo. Kenalin saya MOPEGA BOT, asisten dari Aplikasi MOPEGA. Saya ditugaskan untuk membantu pekerjaan teman-teman teknisi.\n\n";
                     $text .= "📖 Berikut yang bisa saya lakukan :\n\n";
                     $text .= "== Fungsional ==\n";
                     $text .= "/regteknisi untuk registrasi sebagai Teknisi.\n";
@@ -1198,10 +1247,10 @@ function getTextMessage($message)
                     break;
 
                 case $pesan == '/help':
-                case $pesan == '/help@damanasisten_bot':
+                case $pesan == '/help@mopega_bot':
                     sendApiAction($chatid);
 
-                    $text = "Halo. Kenalin saya MOPEGABOT, asisten dari Aplikasi MOPEGA. Saya ditugaskan untuk membantu pekerjaan teman-teman teknisi.\n\n";
+                    $text = "Halo. Kenalin saya MOPEGA BOT, asisten dari Aplikasi MOPEGA. Saya ditugaskan untuk membantu pekerjaan teman-teman teknisi.\n\n";
                     $text .= "📖 Berikut yang bisa saya lakukan :\n\n";
                     $text .= "== Fungsional ==\n";
                     $text .= "/regteknisi untuk registrasi sebagai Teknisi.\n";
