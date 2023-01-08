@@ -246,3 +246,28 @@ function tgl_indo($tanggal)
 
     return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
+
+function statusOrder($status)
+{
+    switch ($status) {
+        case '0':
+            return "Wait Order";
+            break;
+
+        case '1':
+            return "Ordered";
+            break;
+
+        case '2':
+            return "On The Way";
+            break;
+
+        case '3':
+            return "On Going Progress";
+            break;
+
+        default:
+            return "Closed";
+            break;
+    }
+}
