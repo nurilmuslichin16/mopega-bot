@@ -146,82 +146,7 @@ function getTextMessage($message)
                 break;
 
             case $str == 'ORDER':
-                if (strtok($pesan, "\n") == '/reqsc' || strtok($pesan, "\n") == '/reqsc ') {
-                    sendApiAction($chatid);
-                    $reply_message  = $message["reply_to_message"]["text"];
-                    $reply_message  = preg_replace('/^.+\n/', '', $reply_message);
-                    $sales_id       = str_replace('JA', '', strtok($reply_message, "\n"));
-
-                    $cekid    = mysqli_query($koneksi, "SELECT status_id,sales_id FROM tb_sales WHERE sales_id = '$sales_id' AND status_id > 2 AND status_id != 1");
-                    $ceksales = mysqli_query($koneksi, "SELECT message_from,sales_id,message_id FROM tb_sales WHERE sales_id = '$sales_id'");
-                    //$cekorder = mysqli_query($koneksi,"SELECT sales_id FROM tb_sales WHERE sales_id = '$sales_id' AND status_id = 6");
-                    $datenow  = date('Y-m-d H:i:s');
-
-                    if (mysqli_num_rows($cekid) > 0) {
-                        while ($d = mysqli_fetch_array($cekid)) {
-                            if ($d['status_id'] == 6) {
-                                $text = '❌ Order JA' . $sales_id . ' tidak dapat dilakukan request SC, karena statusnya sekarang adalah ' . statusSales($d['status_id']) . '. Silahkan hubungi TL untuk memfollow up KENDALA order ini.';
-                            } else {
-                                $text = '❌ Order JA' . $sales_id . ' tidak dapat dilakukan request SC, karena statusnya sekarang adalah ' . statusSales($d['status_id']) . '';
-                            }
-                        }
-                    } else {
-                        $cekProg    = mysqli_query($koneksi, "SELECT status_id,sales_id FROM tb_sales WHERE sales_id = '$sales_id' AND (status = 'otw' OR status = 'ogp')");
-                        if (mysqli_num_rows($cekProg) > 0) {
-                            $pesan = strtoupper($message['text']);
-                            $arrpsn = explode("\n", $pesan);
-                            $datenow = date('Y-m-d H:i:s');
-
-                            if (sizeof($arrpsn) != 4) {
-                                $text = 'ERROR request SC! Request SC hanya dengan /reqsc [enter] ODP [enter] PORT no_port [enter] DC';
-                            } else {
-                                $odp    = str_replace(' ', '', $arrpsn[1]);
-                                $port   = str_replace(' ', '', $arrpsn[2]);
-                                $dc     = str_replace(' ', '', $arrpsn[3]);
-                                if (strlen($odp) < 14 || strlen($odp) > 16) {
-                                    $text = 'Penulisan ODP tidak valid. Seharusnya ODP-PKL-FAA/001';
-                                } elseif (stripos($odp, '/') == false) {
-                                    $text = 'Kurang tanda / nya. Seharusnya ODP-PKL-FAA/001';
-                                } elseif (stripos($port, ':') == true) {
-                                    $text = 'Perbaiki penulisan port! PORT tanpa titi dua. Seharusnya PORT 1';
-                                } elseif (stripos($port, '=') == true) {
-                                    $text = 'Perbaiki penulisan port! PORT tanpa sama dengan. Seharusnya PORT 1';
-                                } elseif (strlen($port) < 5) {
-                                    $text = 'Perbaiki penulisan port! Seharusnya PORT 1';
-                                } elseif (stripos($dc, ':') == true) {
-                                    $text = 'Perbaiki penulisan dropcore! Seharusnya DC 150 (satuan meter)';
-                                } elseif (strlen($dc) < 4) {
-                                    $text = 'Perbaiki penulisan dropcore! Seharusnya DC 150 (satuan meter)';
-                                } else {
-                                    $port  = str_replace("PORT", "", $port);
-                                    $dc    = str_replace("DC", "", $dc);
-                                    $query = mysqli_query($koneksi, "UPDATE tb_sales SET req_sc_odp='$odp', req_sc_port='$port', req_sc_dc='$dc', status_id = 3, status = 'waitsc', req_sc_by = '$fromid', tgl_req_sc = '$datenow', tgl_update = '$datenow' WHERE sales_id = '$sales_id'");
-                                    if ($query) {
-                                        $ambilt = mysqli_query($koneksi, "SELECT nama_teknisi FROM tb_teknisi WHERE t_telegram_id = '$fromid'");
-                                        while ($d = mysqli_fetch_array($ceksales)) {
-                                            $sales_id = $d['sales_id'];
-                                            $s_telegram_id = $d['message_from'];
-                                            $s_m_id = $d['message_id'];
-                                            while ($t = mysqli_fetch_array($ambilt)) {
-                                                $savelog = mysqli_query($koneksi, "INSERT INTO tb_log (sales_id, action_by, action_on, action_status) VALUES ('$sales_id','$t[nama_teknisi]','$datenow',3)");
-                                                $pesantosales = "⚠️ Order dimintakan SC oleh $t[nama_teknisi]";
-                                                sendApiMsg($s_telegram_id, $pesantosales, $s_m_id, 'Markdown');
-                                            }
-                                        }
-                                        $text = '✅ Request SC berhasil dilakukan, silahkan tunggu. Agar lebih efektif pastikan permintaan SC dilakukan saat jaringan dinyatakan feasible, sebelum proses tarik. Tks';
-                                    } else {
-                                        $text = "❗️ Order JA$sales_id tidak ditemukan.";
-                                    }
-                                }
-                            }
-                        } else {
-                            $text = "❗️ Order JA$sales_id belum dilakukan update ke OTW & OGP. Lakukan update ke OTW & OGP dahulu. Kemudian silahkan reqsc ulang.";
-                        }
-                    }
-
-                    $meid     = $message["message_id"];
-                    sendApiMsg($chatid, $text, $meid);
-                } elseif ($pesan == '/otw') {
+                if ($pesan == '/otw') {
                     sendApiAction($chatid);
 
                     $reply_message  = $message["reply_to_message"]["text"];
@@ -232,19 +157,21 @@ function getTextMessage($message)
                     $cekTiket       = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket'");
 
                     while ($d = mysqli_fetch_array($cekTiket)) {
-                        $status     = $d['status'];
-                        $teknisi    = $d['teknisi'];
+                        $id_gangguan    = $d['id_gangguan'];
+                        $status         = $d['status'];
+                        $teknisi        = $d['teknisi'];
                     }
 
                     if (mysqli_num_rows($cekTiket) > 0) {
                         if ($fromid == $teknisi) {
                             $cekStatus = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket' AND `status` = '1'");
                             if (mysqli_num_rows($cekStatus) > 0) {
-                                $query = mysqli_query($koneksi, "UPDATE tb_gangguan SET `status` = '2', otw_at = '$datenow' WHERE tiket = '$tiket'");
-                                if ($query) {
+                                $query      = mysqli_query($koneksi, "UPDATE tb_gangguan SET `status` = '2', otw_at = '$datenow' WHERE tiket = '$tiket'");
+                                $queryLog   = mysqli_query($koneksi, "INSERT INTO tb_log (id_gangguan, action, keterangan, waktu) VALUES ('$id_gangguan', '2', 'Teknisi menuju lokasi pelanggan', '$datenow')");
+                                if ($query && $queryLog) {
                                     $text = "✅ Tiket $tiket berhasil diupdate ke On The Way lokasi pelanggan.";
                                 } else {
-                                    $text = "Error. Silahkan coba beberapa saat lagi.\n";
+                                    $text = "Mohon Maaf, sistem sedang ada kendala. Silahkan coba beberapa saat lagi.\n";
                                     $text .= "Error : " . mysqli_error($koneksi);
                                 }
                             } else {
@@ -270,19 +197,21 @@ function getTextMessage($message)
                     $cekTiket       = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket'");
 
                     while ($d = mysqli_fetch_array($cekTiket)) {
-                        $status     = $d['status'];
-                        $teknisi    = $d['teknisi'];
+                        $id_gangguan    = $d['id_gangguan'];
+                        $status         = $d['status'];
+                        $teknisi        = $d['teknisi'];
                     }
 
                     if (mysqli_num_rows($cekTiket) > 0) {
                         if ($fromid == $teknisi) {
                             $cekStatus = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket' AND `status` = '2'");
                             if (mysqli_num_rows($cekStatus) > 0) {
-                                $query = mysqli_query($koneksi, "UPDATE tb_gangguan SET `status` = '3', ogp_at = '$datenow' WHERE tiket = '$tiket'");
-                                if ($query) {
+                                $query      = mysqli_query($koneksi, "UPDATE tb_gangguan SET `status` = '3', ogp_at = '$datenow' WHERE tiket = '$tiket'");
+                                $queryLog   = mysqli_query($koneksi, "INSERT INTO tb_log (id_gangguan, action, keterangan, waktu) VALUES ('$id_gangguan', '3', 'Teknisi sedang melakukan pengecekan gangguan', '$datenow')");
+                                if ($query && $queryLog) {
                                     $text = "✅ Tiket $tiket berhasil diupdate ke On Going Progress pengerjaan oleh Teknisi.";
                                 } else {
-                                    $text = "Error. Silahkan coba beberapa saat lagi.\n";
+                                    $text = "Mohon Maaf, sistem sedang ada kendala. Silahkan coba beberapa saat lagi.\n";
                                     $text .= "Error : " . mysqli_error($koneksi);
                                 }
                             } else {
@@ -293,6 +222,66 @@ function getTextMessage($message)
                         }
                     } else {
                         $text = "Tiket $tiket tidak ditemukan.";
+                    }
+
+                    $meid     = $message["message_id"];
+                    sendApiMsg($chatid, $text, $meid);
+                } elseif (strtok($pesan, "\n") == '/closed' || strtok($pesan, "\n") == '/closed ') {
+                    sendApiAction($chatid);
+
+                    $reply_message  = $message["reply_to_message"]["text"];
+                    $reply_message  = preg_replace('/^.+\n/', '', $reply_message);
+
+                    if (strpos($pesan, 'Penyebab :') == false) {
+                        $text = 'Baris PERBAIKAN Tidak Ditemukan. Perbaiki Penulisan Laporan Close! gunakan /formatclosed untuk melihat format laporan close';
+                    } elseif (strpos($pesan, 'Perbaikan :') == false) {
+                        $text = 'Baris PENYEBAB Tidak Ditemukan. Perbaiki Penulisan Laporan Close! gunakan /formatclosed untuk melihat format laporan close';
+                    } else {
+                        preg_match('/PENYEBAB\s{0,1}:(.+)/i', $pesan, $penyebab);
+                        preg_match('/PERBAIKAN\s{0,1}:(.+)/i', $pesan, $perbaikan);
+
+                        $penyebab   = (trim($penyebab[1]) != '' ? trim($penyebab[1]) : '-');
+                        $perbaikan  = (trim($perbaikan[1]) != '' ? trim($perbaikan[1]) : '-');
+
+                        if ($penyebab != '-') {
+                            if ($perbaikan != '-') {
+                                $tiket          = strtok($reply_message, "\n");
+                                $datenow        = date('Y-m-d H:i:s');
+                                $cekTiket       = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket'");
+
+                                while ($d = mysqli_fetch_array($cekTiket)) {
+                                    $id_gangguan    = $d['id_gangguan'];
+                                    $status         = $d['status'];
+                                    $teknisi        = $d['teknisi'];
+                                }
+
+                                if (mysqli_num_rows($cekTiket) > 0) {
+                                    if ($fromid == $teknisi) {
+                                        $cekStatus = mysqli_query($koneksi, "SELECT * FROM tb_gangguan WHERE tiket = '$tiket' AND `status` = '3'");
+                                        if (mysqli_num_rows($cekStatus) > 0) {
+                                            $query      = mysqli_query($koneksi, "UPDATE tb_gangguan SET `status` = '4', closed_at = '$datenow', penyebab = '$penyebab', perbaikan = '$perbaikan' WHERE tiket = '$tiket'");
+                                            $queryLog   = mysqli_query($koneksi, "INSERT INTO tb_log (id_gangguan, action, keterangan, waktu) VALUES ('$id_gangguan', '4', 'Gangguan berhasil dikerjakan dan jaringan sudah normal', '$datenow')");
+                                            if ($query) {
+                                                $text = "✅ Tiket $tiket berhasil Closed oleh Teknisi.";
+                                            } else {
+                                                $text = "Mohon Maaf, sistem sedang ada kendala. Silahkan coba beberapa saat lagi.\n";
+                                                $text .= "Error : " . mysqli_error($koneksi);
+                                            }
+                                        } else {
+                                            $text = "Tiket $tiket tidak dalam status untuk di Closed. Statusnya : " . statusOrder($status) . "";
+                                        }
+                                    } else {
+                                        $text = "❌ Tiket $tiket bukan order anda. Silahkan koordinasi dengan TL";
+                                    }
+                                } else {
+                                    $text = "Tiket $tiket tidak ditemukan.";
+                                }
+                            } else {
+                                $text = "PERBAIKAN tidak valid, lengkapi dengan benar isian Perbaikan.";
+                            }
+                        } else {
+                            $text = "PENYEBAB tidak valid, lengkapi dengan benar isian Penyebab.";
+                        }
                     }
 
                     $meid     = $message["message_id"];
@@ -355,6 +344,17 @@ function getTextMessage($message)
 
                     break;
 
+                case $pesan == '/formatclosed':
+                    sendApiAction($chatid);
+                    $text = 'Reply order dengan format dibawah ini 👇';
+                    sendApiMsg($chatid, $text);
+
+                    $text = "/closed\n";
+                    $text .= "Penyebab : \n";
+                    $text .= "Perbaikan : \n";
+                    sendApiMsg($chatid, $text);
+                    break;
+
                 case $pesan == '/help':
                     sendApiAction($chatid);
 
@@ -365,7 +365,8 @@ function getTextMessage($message)
                     $text .= "/cek [enter] ODP, untuk melihat nomor isi ODP tersebut.\n";
                     $text .= "/otw untuk update progress menjadi On The Way. (Mereply Pesan Order)\n";
                     $text .= "/ogp untuk update progress menjadi On Going Progress. (Mereply Pesan Order)\n";
-                    $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n\n";
+                    $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n";
+                    $text .= "/formatclosed untuk melihat format pesan Closed.\n\n";
                     $text .= "== Non Fungsional ==\n";
                     $text .= "/help untuk melihat informasi bantuan.\n";
                     $text .= "/id untuk melihat informasi ID User Telegram.\n\n";
@@ -508,6 +509,17 @@ function getTextMessage($message)
                     sendApiMsg($chatid, $text);
                     break;
 
+                case $pesan == '/formatclosed':
+                    sendApiAction($chatid);
+                    $text = 'Reply order dengan format dibawah ini 👇';
+                    sendApiMsg($chatid, $text);
+
+                    $text = "/closed\n";
+                    $text .= "Penyebab : \n";
+                    $text .= "Perbaikan : \n";
+                    sendApiMsg($chatid, $text);
+                    break;
+
                 case $pesan == '/help':
                 case $pesan == '/help@mopega_bot':
                     sendApiAction($chatid);
@@ -519,10 +531,12 @@ function getTextMessage($message)
                     $text .= "/cek [enter] ODP, untuk melihat nomor isi ODP tersebut.\n";
                     $text .= "/otw untuk update progress menjadi On The Way. (Mereply Pesan Order)\n";
                     $text .= "/ogp untuk update progress menjadi On Going Progress. (Mereply Pesan Order)\n";
-                    $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n\n";
+                    $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n";
+                    $text .= "/formatclosed untuk melihat format pesan Closed.\n\n";
                     $text .= "== Non Fungsional ==\n";
                     $text .= "/help untuk melihat informasi bantuan.\n";
-                    $text .= "/id untuk melihat informasi ID User Telegram.\n\n";
+                    $text .= "/id untuk melihat informasi ID User Telegram.\n";
+                    $text .= "/groupid untuk melihat informasi ID Group Telegram.\n\n";
                     $text .= "😎 Terima Kasih";
 
                     sendApiMsg($chatid, $text);
