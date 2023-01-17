@@ -362,7 +362,7 @@ function getTextMessage($message)
                     $text .= "📖 Berikut yang bisa saya lakukan :\n\n";
                     $text .= "== Fungsional ==\n";
                     $text .= "/regteknisi untuk registrasi sebagai Teknisi.\n";
-                    $text .= "/cek [enter] ODP, untuk melihat nomor isi ODP tersebut.\n";
+                    $text .= "/cekodp #[odp], untuk melihat nomor isi ODP tersebut.\n";
                     $text .= "/otw untuk update progress menjadi On The Way. (Mereply Pesan Order)\n";
                     $text .= "/ogp untuk update progress menjadi On Going Progress. (Mereply Pesan Order)\n";
                     $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n";
@@ -375,123 +375,29 @@ function getTextMessage($message)
                     sendApiMsg($chatid, $text);
                     break;
 
-                case preg_match("/\/cek (.*)/", $pesan, $hasil):
+                case preg_match("/\/cekodp (.*)/", $pesan, $hasil):
                     sendApiAction($chatid);
 
-                    $sales_id = intval(preg_replace('/[^0-9]+/', '', $hasil[1]), 10);
+                    $pesan      = explode(" ", $message['text']);
+                    $odp        = strtoupper(str_replace("#", "", trim($pesan[1])));
 
-                    $inkeyboard = [
-                        [
-                            ['text' => 'A. RNA', 'callback_data' => "RNA-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'B. ALAMAT', 'callback_data' => "ALAMAT-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'C. BATAL', 'callback_data' => "BATAL-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'D. PENDING', 'callback_data' => "PENDING-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'E. ODP FULL', 'callback_data' => "ODP FULL-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'F. ODP LOSS', 'callback_data' => "ODP LOSS-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'G. ODP RETI', 'callback_data' => "ODP RETI-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'H. TIANG', 'callback_data' => "TIANG-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'I. PT2', 'callback_data' => "PT2-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'J. NO FO/ODP', 'callback_data' => "NO FO/ODP-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'K. RUTE INSTALASI', 'callback_data' => "RUTE INSTALASI-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'L. ODP BLM LIVE', 'callback_data' => "ODP BLM LIVE-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'M. IJIN TANAM TIANG', 'callback_data' => "IJIN TANAM TIANG-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'N. ONU > 32', 'callback_data' => "ONU > 32-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'O. PENDING INSTALASI', 'callback_data' => "PENDING INSTALASI-$sales_id"],
-                        ],
-                        [
-                            ['text' => 'P. NJKI', 'callback_data' => "NJKI-$sales_id"],
-                        ]
-                    ];
-
-                    $cekorder   = mysqli_query($koneksi, "SELECT sales_id FROM tb_kendala WHERE sales_id = '$sales_id'");
-                    $datenow    = date('Y-m-d H:i:s');
-                    $meid       = $message["message_id"];
-                    if (mysqli_num_rows($cekorder) > 0) {
-                        while ($d = mysqli_fetch_array($cekorder)) {
-                            $text = '❗️ Order ID JA' . $sales_id . ' sudah dilaporkan sebagai kendala ' . $d['kendala'] . '';
-                            sendApiMsg($chatid, $text, false, 'Markdown');
+                    $cekODP     = mysqli_query($koneksi, "SELECT * FROM tb_pelanggan WHERE odp = '$odp' ORDER BY port");
+                    if (mysqli_num_rows($cekODP) > 0) {
+                        $text       = "Daftar Nomer di $odp \n -- \n";
+                        foreach ($cekODP as $data) {
+                            $port   = $data['port'];
+                            $inet   = $data['no_internet'] != '' ? $data['no_internet'] : '-';
+                            $voice  = $data['no_voice'] != '' ? $data['no_voice'] : '-';
+                            $text   .= "$port. $inet - $voice \n";
                         }
                     } else {
-                        $cekja   = mysqli_query($koneksi, "SELECT sales_id FROM tb_sales WHERE sales_id = '$sales_id'");
-
-                        if (mysqli_num_rows($cekja) > 0) {
-                            sendApiKeyboard($chatid, 'Silahkan pilih jenis kendala nya :', $inkeyboard, true);
-                        } else {
-                            $text = "❌ JA$sales_id belum diorder oleh TL!";
-                            sendApiMsg($chatid, $text, false, 'Markdown');
-                        }
+                        $text       = "Mohon maaf, $odp belum ada datanya";
                     }
 
+                    sendApiMsg($chatid, $text, false);
                     break;
 
-
                 default:
-                    $cekt       = mysqli_query($koneksi, "SELECT t_telegram_id FROM tb_teknisi WHERE t_telegram_id = '$fromid'");
-                    $ceknonik   = mysqli_query($koneksi, "SELECT t_telegram_id FROM tb_teknisi WHERE t_telegram_id = '$fromid' AND nik IS NULL");
-                    $ceknoname  = mysqli_query($koneksi, "SELECT t_telegram_id FROM tb_teknisi WHERE t_telegram_id = '$fromid' AND nama_teknisi IS NULL");
-                    $ceknocrew  = mysqli_query($koneksi, "SELECT t_telegram_id FROM tb_teknisi WHERE t_telegram_id = '$fromid' AND crew IS NULL");
-                    $ceknomitra = mysqli_query($koneksi, "SELECT t_telegram_id FROM tb_teknisi WHERE t_telegram_id = '$fromid' AND mitra IS NULL");
-                    if (mysqli_num_rows($cekt) <= 0) {
-                        $text = 'Silahkan ketik /help untuk melihat menu bantuan :)';
-                        sendApiMsg($chatid, $text);
-                    } elseif (mysqli_num_rows($ceknonik) > 0) {
-                        $text = 'Kamu belum menyelesaikan pendaftaran. Silahkan lanjutkan pendaftarannya';
-                        sendApiMsg($chatid, $text);
-                        $text = 'Masukan NIK dengan 8 digit angka. Jika kamu belum memiliki nik, gunakan tanggal lahir kamu. misal : 20 Juli 1998, maka masukan nik dengan 20071998';
-                        sendApiMsg($chatid, $text);
-                        $text = 'Silahkan masukan nik kamu :';
-                        sendApiMsgReply($chatid, $text);
-                    } elseif (mysqli_num_rows($ceknoname) > 0) {
-                        $text = 'Kamu belum menyelesaikan pendaftaran. Silahkan lanjutkan pendaftarannya';
-                        sendApiMsg($chatid, $text);
-                        $text = '👤 Masukan nama kamu :';
-                        sendApiMsgReply($chatid, $text);
-                    } elseif (mysqli_num_rows($ceknocrew) > 0) {
-                        $text = 'Kamu belum menyelesaikan pendaftaran. Silahkan lanjutkan pendaftarannya';
-                        sendApiMsg($chatid, $text);
-                        $text = "Masukan KODE DATEL dengan, Contoh : PKL, SLW, BTG, TEG, BRB, PML";
-                        sendApiMsg($chatid, $text);
-                        $text = '👥 Masukan KODE DATEL :';
-                        sendApiMsgReply($chatid, $text);
-                    } elseif (mysqli_num_rows($ceknomitra) > 0) {
-                        $text = 'Kamu belum menyelesaikan pendaftaran. Silahkan lanjutkan pendaftarannya';
-                        sendApiMsg($chatid, $text);
-                        $text = 'Masukan Mitra :';
-                        sendApiMsgReply($chatid, $text);
-                        $text = "Isi Mitra dengan nama perusahaan. misal : HCP, TA, GLOBAL, KOPEGTEL, ZAG, KJS";
-                        sendApiMsg($chatid, $text);
-                    } else {
-                        $text = 'Silahkan ketik /help untuk melihat menu bantuan :)';
-                        sendApiMsg($chatid, $text);
-                    }
 
                     break;
             }
@@ -528,7 +434,7 @@ function getTextMessage($message)
                     $text .= "📖 Berikut yang bisa saya lakukan :\n\n";
                     $text .= "== Fungsional ==\n";
                     $text .= "/regteknisi untuk registrasi sebagai Teknisi.\n";
-                    $text .= "/cek [enter] ODP, untuk melihat nomor isi ODP tersebut.\n";
+                    $text .= "/cekodp #[odp], untuk melihat nomor isi ODP tersebut.\n";
                     $text .= "/otw untuk update progress menjadi On The Way. (Mereply Pesan Order)\n";
                     $text .= "/ogp untuk update progress menjadi On Going Progress. (Mereply Pesan Order)\n";
                     $text .= "/closed untuk update progress menjadi Closed. (Mereply Pesan Order)\n";
