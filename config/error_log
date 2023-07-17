@@ -1,0 +1,30 @@
+[15-Jul-2023 05:14:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21

@@ -1,0 +1,312 @@
+[15-Jul-2023 05:14:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 05:14:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php:21
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/config/koneksi.php(21): mysqli_connect()
+#1 /home/mopegamy/bot.mopega.my.id/method/hook.php(18): require_once('/home/mopegamy/...')
+#2 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 21
+[15-Jul-2023 12:14:34 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot5711494409:AAF5I3Qlc62h7CZenfu_ib2v15QhIybPk40/getUpdates): Failed to open stream: HTTP request failed! HTTP/1.1 409 Conflict
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 12:14:34 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 69
+[15-Jul-2023 12:15:00 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot5711494409:AAF5I3Qlc62h7CZenfu_ib2v15QhIybPk40/getUpdates): Failed to open stream: HTTP request failed! HTTP/1.1 409 Conflict
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 12:15:00 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 69
+[15-Jul-2023 12:15:03 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot5711494409:AAF5I3Qlc62h7CZenfu_ib2v15QhIybPk40/getUpdates): Failed to open stream: HTTP request failed! HTTP/1.1 409 Conflict
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 12:15:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 69
+[15-Jul-2023 14:13:06 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:06 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:06 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/mopegamy/bot.mopega.my.id/proses.php on line 132
+[15-Jul-2023 21:13:06 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:06 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:13:24 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:24 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:24 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:24 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:13:24 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:25 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:13:27 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:27 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:27 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:28 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:13:28 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:28 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:13:30 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:30 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:13:30 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:30 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:13:30 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:13:31 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:17:12 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:12 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:12 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/mopegamy/bot.mopega.my.id/proses.php on line 311
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/mopegamy/bot.mopega.my.id/proses.php on line 312
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/mopegamy/bot.mopega.my.id/proses.php on line 313
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/mopegamy/bot.mopega.my.id/proses.php on line 314
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/mopegamy/bot.mopega.my.id/proses.php on line 316
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/mopegamy/bot.mopega.my.id/proses.php on line 320
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/mopegamy/bot.mopega.my.id/proses.php on line 325
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/mopegamy/bot.mopega.my.id/proses.php on line 328
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:13 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:14 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:14 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:15 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:15 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:16 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:17:16 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:16 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:16 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:17 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:17 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:17 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:17:18 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:18 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:18 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:18 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:17:18 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:17:19 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 14:17:23 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[15-Jul-2023 21:17:23 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /home/mopegamy/bot.mopega.my.id/proses.php on line 24
+[15-Jul-2023 21:20:03 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:04 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:04 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:05 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:07 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:08 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:08 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:08 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:09 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:10 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:10 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:11 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:11 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:12 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:12 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:13 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:13 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:14 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:14 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:15 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:15 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:16 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:20:16 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:20:17 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:21:20 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:21:20 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:21:20 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:21:21 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:22:27 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /home/mopegamy/bot.mopega.my.id/proses.php on line 24
+[15-Jul-2023 21:24:23 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:23 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:24:23 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:24 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:24:24 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:25 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:24:25 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:26 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:24:26 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:27 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:24:27 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:24:28 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:29:20 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:29:20 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendChatAction): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[15-Jul-2023 21:29:20 Asia/Jakarta] PHP Notice:  Undefined index: token in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 45
+[15-Jul-2023 21:29:21 Asia/Jakarta] PHP Warning:  file_get_contents(https://api.telegram.org/bot/sendMessage): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 56
+[16-Jul-2023 03:01:57 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:57 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:57 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:57 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:57 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:57 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:59 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:59 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:01:59 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:04 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:04 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:04 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:12 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:12 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:12 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:28 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:28 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:02:28 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:03:01 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:03:01 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:03:01 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:04:08 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:04:08 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:04:08 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:06:02 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:06:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:07:53 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:07:53 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:09:32 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:09:32 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:10:45 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:10:45 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:11:50 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:11:50 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:13:34 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:13:34 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:14:49 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:14:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:16:36 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:16:36 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:18:13 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:18:13 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:19:25 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:19:25 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:21:10 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:21:10 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:22:27 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:22:27 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:24:08 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:24:08 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:25:32 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/mopegamy/bot.mopega.my.id/config/koneksi.php on line 25
+[16-Jul-2023 03:25:32 UTC] PHP Warning:  require_once(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 03:25:32 UTC] PHP Fatal error:  require_once(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 24
+[16-Jul-2023 10:29:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:284
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(291): notifEmail(Array, Array)
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 284
+[16-Jul-2023 10:43:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:284
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(291): notifEmail(Array, Array)
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 284
+[17-Jul-2023 21:31:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:31:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:31:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:31:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:32:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:32:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:32:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer' not found in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php:329
+Stack trace:
+#0 /home/mopegamy/bot.mopega.my.id/proses.php(438): testNotifEmail()
+#1 /home/mopegamy/bot.mopega.my.id/proses.php(30): getTextMessage(Array)
+#2 /home/mopegamy/bot.mopega.my.id/method/hook.php(30): getApiMessage(Array)
+#3 {main}
+  thrown in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 329
+[17-Jul-2023 21:33:59 Asia/Jakarta] PHP Warning:  shell_exec() has been disabled for security reasons in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 358
+[17-Jul-2023 21:34:03 Asia/Jakarta] PHP Warning:  shell_exec() has been disabled for security reasons in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 358
+[17-Jul-2023 21:34:22 Asia/Jakarta] PHP Warning:  shell_exec() has been disabled for security reasons in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 358
+[17-Jul-2023 21:41:00 Asia/Jakarta] PHP Warning:  shell_exec() has been disabled for security reasons in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 319
+[17-Jul-2023 21:45:05 Asia/Jakarta] PHP Warning:  shell_exec() has been disabled for security reasons in /home/mopegamy/bot.mopega.my.id/helper/fungsi.php on line 319
